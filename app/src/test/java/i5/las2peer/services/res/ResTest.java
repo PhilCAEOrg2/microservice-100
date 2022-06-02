@@ -99,24 +99,7 @@ public class ResTest {
         
     try {
       ClientResponse result = c.sendRequest("GET", mainPath + "/test", "");
-      Object response = JSONValue.parse(result.getResponse().trim());
-      // Require response to be a JSONObject
-      Assert.assertTrue(response instanceof JSONObject);
-      // Cast response to JSONObject
-      JSONObject object307278 = (JSONObject) response;
-      // Assert that field user exists
-      Assert.assertTrue(object307278.containsKey("user"));
-      Object object307278_2 = object307278.get("user");
-      
-      // Require object307278_2 to be a JSONObject
-      Assert.assertTrue(object307278_2 instanceof JSONObject);
-      // Cast object307278_2 to JSONObject
-      JSONObject object969423 = (JSONObject) object307278_2;
-      // Assert that field id exists
-      Assert.assertTrue(object969423.containsKey("id"));
-      Object object969423_2 = object969423.get("id");
-      
-
+    
       System.out.println("Result of 'test$HTTP_Method_Name$': " + result.getResponse().trim());
     } catch (Exception e) {
       e.printStackTrace();
