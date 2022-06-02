@@ -118,7 +118,8 @@ public class Res extends RESTService {
     if(res_condition) {
       JSONObject result = new JSONObject();
 
-      
+      JSONObject user = new JSONObject(); 
+      user.put("c")
 
       return Response.status(HttpURLConnection.HTTP_OK).entity(result.toJSONString()).build();
     }
