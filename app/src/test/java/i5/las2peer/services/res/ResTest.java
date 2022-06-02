@@ -99,7 +99,33 @@ public class ResTest {
         
     try {
       ClientResponse result = c.sendRequest("GET", mainPath + "/test", "");
-    
+      Object response = JSONValue.parse(result.getResponse().trim());
+      // Require response to be a JSONObject
+      Assert.assertTrue(response instanceof JSONObject);
+      // Cast response to JSONObject
+      JSONObject object398580 = (JSONObject) response;
+      // Assert that field user exists
+      Assert.assertTrue(object398580.containsKey("user"));
+      Object object398580_2 = object398580.get("user");
+      
+      // Require object398580_2 to be a JSONObject
+      Assert.assertTrue(object398580_2 instanceof JSONObject);
+      // Cast object398580_2 to JSONObject
+      JSONObject object366593 = (JSONObject) object398580_2;
+      // Assert that field contact exists
+      Assert.assertTrue(object366593.containsKey("contact"));
+      Object object366593_2 = object366593.get("contact");
+      
+      // Require object366593_2 to be a JSONObject
+      Assert.assertTrue(object366593_2 instanceof JSONObject);
+      // Cast object366593_2 to JSONObject
+      JSONObject object448293 = (JSONObject) object366593_2;
+      // Assert that field id exists
+      Assert.assertTrue(object448293.containsKey("id"));
+      Object object448293_2 = object448293.get("id");
+      
+      Assert.assertTrue(object448293_2 instanceof Number);
+
       System.out.println("Result of 'test$HTTP_Method_Name$': " + result.getResponse().trim());
     } catch (Exception e) {
       e.printStackTrace();
