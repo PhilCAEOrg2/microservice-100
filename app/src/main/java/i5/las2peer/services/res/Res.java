@@ -121,7 +121,7 @@ public class Res extends RESTService {
       JSONObject user = new JSONObject();  
       JSONObject contact = new JSONObject(); 
       contact.put("id", 4);
-      user.put("contact", contact); 
+      //user.put("contact", contact); 
  
       result.put("user", user);
 
